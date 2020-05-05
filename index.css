@@ -1,0 +1,61 @@
+
+
+body { position: absolute;
+width: 1441px;
+height: 900px;
+left: 0px;
+top: 0px;
+padding: 40px;
+
+background: url(142176.jpg);
+}
+
+      .wrapper {
+      display: flex;
+      height: 15vh;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      }
+
+      .svg-btn {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+	  left: 672px;
+	  top: 482px;
+      }
+
+      svg {
+      fill: #AA00D5;
+      -webkit-animation: glowing-polygon 1300ms infinite;
+      -moz-animation: glowing-polygon 1300ms infinite;
+      -o-animation: glowing-polygon 1300ms infinite;
+      animation: glowing-polygon 1300ms infinite;
+      }
+      @-webkit-keyframes glowing-polygon {
+      0% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 3px #AA00D5); }
+      50% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 15px #AA00D5); }
+      100% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 3px #AA00D5); }
+      }
+      @keyframes glowingPolygon  {
+      0% { fill: #AA00D5; filter: drop-shadow( 0 0 3px #AA00D5); }
+      50% { fill: #AA00D5; filter: drop-shadow( 0 0 15px #AA00D5); }
+      100% { fill: #AA00D5; filter: drop-shadow( 0 0 3px #AA00D5); }
+      }
+
+         .Ellipse2 { position: absolute;
+		width: 160px;
+      height: 160px;
+      border-radius: 50%;
+		left: 692px;
+		top: 515px;
+
+		background: black;
+		}
+	}
+
+
+
+
