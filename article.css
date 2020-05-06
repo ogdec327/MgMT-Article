@@ -2,13 +2,11 @@
 * { box-sizing: border-box }
 
 body {
-  color: #000;
   transition: background-color 1s ease;
-  background: black;
 }
 
 
-.fixed{
+/*.fixed{
  position:fixed;
  top:0;
  z-index: 1;
@@ -16,6 +14,7 @@ body {
  height:100%;
  background-image:url(design2.png); background-repeat: no-repeat;  background-size: 100% 100%; 
 }
+*/
 .content{margin-top:57px;}
 
 .upper-container
@@ -136,44 +135,46 @@ span
     color: #854399;
 
 }
-.section1 {
-  height: 2000px;
-  background-color: rgb(6, 72, 0);
-  margin-top: 0px;
-  width: 100%;
-  height: 100%;
+/* section styles */
+.section {
+  /* min height incase content is higher than window height */
+  min-height: 2000px;;
+  display: flex;
+  justify-content: space-around;
+/*   align-items: center; */
+  font-family: sans-serif;
+  /* outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
 }
 
-img.sticky {
+/* colours */
+.color-green {
+  background-color: rgb(6, 72, 0);
+}
+.color-black {
+  background-color: black;
+}
+.color-purple {
+  background-color: rgb(72, 5, 89);
+}
+.color-magenta {
+  background-color: rgb(211, 13, 168);
+}
+
+body {
+  text-align: center;
+  font-size: 120%;
+  line-height: 1.618;
+}
+
+/*img.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
   height: 100%;
 }
-
-.section2 {
-  height: 2000px;
-  background-color: rgb(72, 5, 89);
-  width: 100%;
-  height: 100%;
-}
-
-.section3 {
-  height: 2000px;
-  background-color: rgb(13, 123, 3);
-   margin-top: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.section4 {
-  height: 2000px;
-  background-color: rgb(211, 13, 168);
-  padding-top: :5px;
-  padding-bottom: 5px;
-}
-
+*/
 h1 {
   font-family: 'Staatliches', cursive;
   font-size: 20rem;

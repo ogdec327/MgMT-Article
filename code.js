@@ -1,33 +1,40 @@
-/*const [red, green, blue] = [69, 111, 225]
-const section1 = document.querySelector('.section1')
-
-window.addEventListener('scroll', () => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 150
-  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-})
-.scroll();*/
 
 var hotbod = document.querySelector("body");
+var $window = $("window");
 
 function doStuff() {
     hotbod.className += " animate";
-}
+};
 
 window.onload = function() {
     doStuff();
 };
 
-const [red, green, blue] = [6, 72, 0]
-const section1 = document.querySelector('.section1');
-const section2 = document.querySelector('.section2');
-const section3 = document.querySelector('.section3');
-const section4 = document.querySelector('.section4');
-
-window.addEventListener('scroll', () => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 150
-  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-});
-
-
+$(window).scroll(function() {
+  
+  // selectors
+  var $body = $('body'),
+      $panel = $('.section');
+  
+  // Change 33% earlier than scroll position so colour is there when you arrive.
+  var scroll = $window.scrollTop() + ($window.height() / 3);
+ 
+  $panel.each(function () {
+    var $this = $(this);
+    
+    // if position is within range of this panel.
+    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+    // Remember we set the scroll to 33% earlier in scroll var.
+    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+          
+      // Remove all classes on body with color-
+      $body.removeClass(function (index, css) {
+        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
+      });
+       
+      // Add class of currently active div
+      $body.addClass('color-' + $(this).data('color'));
+    }
+  });    
+  
+}).scroll();
