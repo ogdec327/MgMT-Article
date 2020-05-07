@@ -1,12 +1,13 @@
-/* Setting fade transition and default settings */
+
 * { box-sizing: border-box }
 
 body {
   transition: background-color 1s ease;
+  width: flex;
 }
 
 
-/*.fixed{
+.fixed{
  position:fixed;
  top:0;
  z-index: 1;
@@ -14,6 +15,7 @@ body {
  height:100%;
  background-image:url(design2.png); background-repeat: no-repeat;  background-size: 100% 100%; 
 }
+
 */
 .content{margin-top:57px;}
 
@@ -137,12 +139,14 @@ span
 }
 /* section styles */
 .section {
-  /* min height incase content is higher than window height */
-  min-height: 2000px;;
+
+  padding-right: 20px;
+  min-height: 150px;;
+  min-width: 500px;
   display: flex;
   justify-content: space-around;
-/*   align-items: center; */
-  font-family: sans-serif;
+  align-items: center;
+  font-family: 'Staatliches', cursive;
   /* outline: 10px solid hotpink; */
   /* turn above on to see the edge of panels */
 }
@@ -150,6 +154,9 @@ span
 /* colours */
 .color-green {
   background-color: rgb(6, 72, 0);
+}
+.color-lightgreen {
+  background-color: rgb(30, 170, 8);
 }
 .color-black {
   background-color: black;
@@ -160,6 +167,9 @@ span
 .color-magenta {
   background-color: rgb(211, 13, 168);
 }
+.color-lime {
+  background-color: rgb(42, 244, 11);
+}
 
 body {
   text-align: center;
@@ -167,19 +177,19 @@ body {
   line-height: 1.618;
 }
 
-/*img.sticky {
+img.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
   height: 100%;
 }
-*/
+
 h1 {
   font-family: 'Staatliches', cursive;
   font-size: 20rem;
+  width: 50%;
   margin-top: 10%;
-  margin-left: 20%;
   margin-bottom: .5;
   line-height: .2;
 
@@ -188,7 +198,7 @@ h1 {
 h2 {
   font-family: 'Staatliches', cursive;
   font-size: 10rem;
-  margin-left: 20%;
+  width: 100%;
   margin-top: 10%;
   margin-bottom: .5;
   line-height: .2;
@@ -196,19 +206,21 @@ h2 {
 }
 h3 {
    font-family: 'Staatliches', cursive;
-  font-size: 10rem;
+  font-size: 2rem;
+  text-align: justify;
+  width: 100%;
+  width: 60%;
   margin-top: 1;
-   margin-left: 20%;
   margin-bottom: .5;
   line-height: 1;
-  color: white;
+  color: #854399;
 }
 h4 {
   font-family: 'Staatliches', cursive;
   font-size: 2rem;
   text-align: justify;
-  margin-left: 20%;
-  width: 55%;
+  width: 100%;
+  width: 60%;
   margin-top: 1;
   margin-bottom: .5;
   line-height: 1;
@@ -218,12 +230,61 @@ h5 {
   font-family: 'Jost', sans-serif;
   font-size: 1rem;
   text-align: justify;
-  margin-left: 20%;
+  width: 100%;
    width: 60%;
   margin-top: 1;
   margin-bottom: .5;
   line-height: 1.2;
   color: white;
 }
+img {
+  display:block;
+  max-width: 100%;
+}
+}
+.wrapper {
+      display: flex;
+      height: 15vh;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      }
+
+.svg-btn {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    align-content: center;
+      }
+
+      svg {
+      fill: #AA00D5;
+      -webkit-animation: glowing-polygon 1300ms infinite;
+      -moz-animation: glowing-polygon 1300ms infinite;
+      -o-animation: glowing-polygon 1300ms infinite;
+      animation: glowing-polygon 1300ms infinite;
+      }
+      @-webkit-keyframes glowing-polygon {
+      0% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 3px #AA00D5); }
+      50% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 15px #AA00D5); }
+      100% { fill: #AA00D5; -webkit-filter: drop-shadow( 0 0 3px #AA00D5); }
+      }
+      @keyframes glowingPolygon  {
+      0% { fill: #AA00D5; filter: drop-shadow( 0 0 3px #AA00D5); }
+      50% { fill: #AA00D5; filter: drop-shadow( 0 0 15px #AA00D5); }
+      100% { fill: #AA00D5; filter: drop-shadow( 0 0 3px #AA00D5); }
+      }
+
+         .Ellipse2 { position: fixed;
+    width: 160px;
+      height: 160px;
+      border-radius: 50%;
+    align-content: center;
+
+    background: black;
+    }
+  }
+
 
 }
